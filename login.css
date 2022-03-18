@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: linear-gradient(45deg, black, #00224C);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background: white;
+    max-width: 450px;
+    min-height: 60vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgb(0,0,0,0.2);
+    border-radius: 8px;
+}
+
+form{
+    display: flex;
+    flex-direction: column; /*Cada elemento ocupa uma coluna toda*/
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.titulo_login{
+    font-size: 35px;
+}
+
+.header{
+    display:flex;
+    flex-direction:row;
+}
+
+.header h2{
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+    color: #00224C;
+}
+
+.header h2::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 38px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #A1272C, #E4353D);
+}
+
+.input-field{
+    position: relative;
+}
+
+form .input-field:first-child{
+    margin-bottom: 1.5rem; /* Cria um espaçamento entre os inputs*/
+}
+
+.underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgb(0,0,0,0.2);
+}
+
+.underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg,#A1272C, #E4353D);
+    transform: scaleX(0); /* quando nao estiver focado nao aparece o roxo */
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);/* quando estiver focado aparece o roxo no underline */
+}
+
+.input-field input{
+    outline: 0; /* Tira a borda da caixa de input */
+    font-size: 0.9rem;
+    color: #A1272C;
+}
+
+.input-field input::placeholder{
+    color: rgb(0,0,0,0.5);
+
+}
+
+.botao{
+    margin-top: 2rem;
+    padding: 0.4rem 0;
+    background: linear-gradient(to right,#A1272C,#E4353D);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    width: 50%;
+    align-self: center;
+}
+
+.botao:hover{
+    letter-spacing: 0.5px; /* aumenta espaçamento entre as letras do conteudo do botao */
+    background: linear-gradient(to left,#A1272C, #E4353D);
+}
+
+.footer span{
+    color: rgb(0,0,0,0.8);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.social-fields{
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.social-fields a{
+    text-decoration: none;  /* tira o sublinhado */
+    color: white;
+}
+
+
+.social-fields a i{
+    margin: 0 0.5rem;
+    width: 15px; /*lagura padrão para que os conteudos dos icones ficarem centralizados entre si */
+}
+
+
+.input_padrao{
+    display: block; /* cada input ocupa uma linha toda que ela pertence */
+ 
+}
+
+.cadastrar{
+    color: #A1272C ;
+}
+
+.titulo{
+    color: #00224C;
+}
+
+.copyright{
+    font-size: 0.8rem;
+    color: rgb(0,0,0,0.9);
+    width: 100%;
+    margin: 2rem 0 0;
+}
+
+.logo_davi_projetos{
+    width: 65%;
+    position: relative;
+    cursor: pointer;
+    margin: 0px 0 0 100px;
+}
