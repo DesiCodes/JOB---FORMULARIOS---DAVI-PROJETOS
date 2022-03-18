@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elaboração de Plano de Rigging</title>
+
+        <link rel="stylesheet" href="plano_rigging.css">
+    </head>
+
+    <body>
+        
+        <div class="campo">
+            <header>
+                <h2>Dados do Projeto de Rigging</h2>
+            </header>
+         
+            <main>
+                <form>
+                
+                    <div class="bloco1">
+                        <section class="dados-cliente-obra"> 
+                            <h3>DADOS DA OBRA/CLIENTE</h3>
+        
+                            <label for="solicitante">
+                                <span>Solicitante:</span>
+                                <input type="text" id="solicitante" name="solicitante" required>
+                            </label>
+            
+                            <label for="cliente">
+                                <span>Cliente:</span>
+                                <input type="text" id="cliente" name="cliente" required>
+                            </label>
+            
+                            <label for="local">
+                                <span>Local:</span>
+                                <input type="text" id="local" name="local" required>
+                            </label>
+            
+                            <label for="obra">
+                                <span>Obra:</span>
+                                <input type="text" id="obra" name="obra" required>
+                            </label>
+                        </section>
+        
+                        <section class="interferencias">
+                            <h3>INTERFERÊNCIAS</h3>
+                            
+                            <div class="titulo" >
+                                <label ><strong>Interferências da obra:</strong></label><br>
+                            </div>
+                            
+
+                            <div class="check-interf">
+                                
+                                <label >
+                                    <label for="interferencia1">
+                                        <input type="checkbox" id="interferencia1" name="interferencia1" value="galeria-subuterranea"> 
+                                        Galeria Subterrânea
+                                    </label>
+                                    <label for="interferencia2"> 
+                                        <input type="checkbox" id="interferencia2" name="interferencia2" value="linha-energizada">
+                                        Linha Energizada
+                                    </label>
+                                </label>
+                                
+                                <label>  
+                                    <label for="interferencia3">
+                                    <input type="checkbox" id="interferencia3" name="interferencia3" value="acesso-limitado">
+                                        Física/Acesso Limitado
+                                    </label>
+                                    
+                                    <label for="interferencia4"> 
+                                        <input type="checkbox" id="interferencia4" name="interferencia4" value="outras">
+                                        Outras
+                                    </label>
+                                </label>
+                                
+                                
+                            </div>
+        
+                            <div class="comen-interferencias">
+                                <label for="comentarios"><strong>Comentários sobre as interferências: </strong></label>
+                                <textarea rows="6" id="comentarios" name="comentarios"></textarea>
+                            </div>
+        
+                        </section>
+                    </div>
+                    
+    
+                    <section class="cargas">
+                        <h3>CARGA A SER MOVIMENTADA</h3>
+                        
+                        <div>
+                            <label for=""><strong>Carga1</strong></label><br>
+                        </div>
+                    
+
+                        <div class="box-carga">
+                            
+                            
+                            <label>
+                                <label for="descricao1">
+                                    Descrição
+                                    <input class="descricao" type="text" id="descricao1" required>
+                                </label>
+                                <label for="peso1">
+                                    Peso(t)
+                                    <input type="text" id="peso1" required>
+                                </label>
+
+                                <label for="compri1">
+                                    Comprimento(mm)
+                                    <input type="text" id="compri1" required>
+                                </label>
+                            </label>
+
+                            <label>
+                                <label for="largura1">
+                                    Largura(mm)
+                                    <input type="text" id="largura1" required>
+                                </label>
+                                <label for="altura1">
+                                    Altura(mm)
+                                    <input type="text" id="altura1" required>
+                                </label>
+
+                            </label>
+
+                        </div>
+
+                        <label  class="vertic-check" for="vertic">
+                            Verticalização da carga?
+                            <input type="checkbox" id="vertic" >
+                        </label><br>
+
+                        <div class="arquivo-desnho">
+                        
+                            <label class="" for="desenho1">
+                                Inserir Desenho da carga 
+                                <input class="arquivo-desnho-input" type="file" id="desenho1">
+                            </label> 
+                        </div>
+                        
+
+
+                        <details >
+                            <summary>Mais cargas</summary><br>
+
+                            <div>
+                                <label for=""><strong>Carga2</strong></label><br>
+                            </div>
+                        
+    
+                            <div class="box-carga">
+                                
+                                
+                                <label>
+                                    <label for="descricao2">
+                                        Descrição
+                                        <input class="descricao" type="text" id="descricao2" >
+                                    </label>
+                                    <label for="peso2">
+                                        Peso(t)
+                                        <input type="text" id="peso2" >
+                                    </label>
+    
+                                    <label for="compri2">
+                                        Comprimento(mm)
+                                        <input type="text" id="compri2" >
+                                    </label>
+                                </label>
+    
+                                <label>
+                                    <label for="largura2">
+                                        Largura(mm)
+                                        <input type="text" id="largura2" >
+                                    </label>
+                                    <label for="altura2">
+                                        Altura(mm)
+                                        <input type="text" id="altura2" >
+                                    </label>
+    
+                                </label>
+
+                            </div>
+
+                            <label class="vertic-check" for="vertic2">
+                                Verticalização?
+                                <input  type="checkbox" id="vertic2" >
+                            </label><br>
+
+                            <div class="arquivo-desnho">
+                            
+                                <label class="" for="desenho2">
+                                    Inserir Desenho da carga 
+                                    <input class="arquivo-desnho-input" type="file" id="desenho2">
+                                </label> 
+                            </div>
+
+                            <div>
+                                <label for=""><strong>Carga3</strong></label><br>
+                            </div>
+                        
+    
+                            <div class="box-carga">
+                                
+                                
+                                <label>
+                                    <label for="descricao3">
+                                        Descrição
+                                        <input class="descricao" type="text" id="descricao3" >
+                                    </label>
+                                    <label for="peso3">
+                                        Peso(t)
+                                        <input type="text" id="peso3" >
+                                    </label>
+    
+                                    <label for="compri3">
+                                        Comprimento(mm)
+                                        <input type="text" id="compri3" >
+                                    </label>
+                                </label>
+    
+                                <label>
+                                    <label for="largura3">
+                                        Largura(mm)
+                                        <input type="text" id="largura3" >
+                                    </label>
+                                    <label for="altura3">
+                                        Altura(mm)
+                                        <input type="text" id="altura3" >
+                                    </label>
+    
+                                    
+                                </label>
+    
+                            </div>
+                            
+                            <label class="vertic-check" for="vertic3">
+                                Verticalização?
+                                <input  type="checkbox" id="vertic3" >
+                            </label><br>
+
+
+                            <div class="arquivo-desnho">
+                            
+                                <label class="" for="desenho3">
+                                    Inserir Desenho da carga 
+                                    <input class="arquivo-desnho-input" type="file" id="desenho3">
+                                </label> 
+                            </div>
+                           
+                        </details>
+             
+                    </section>
+
+
+    
+                    <section class="operacao-guind">
+                        
+                        <label><h3>INÍCIO DA OPERAÇÃO</h3></label>
+                        
+                        <div class="check">
+                            
+    
+                            <label for="radio_traseira">
+                                <input type="radio" name="inicio" id="radio_traseira" value="traseira" required checked> 
+                                Traseira
+                            </label>
+                        
+        
+                            <label for="radio_lateral">
+                                <input type="radio" name="inicio" id="radio_lateral" value="lateral" required>
+                                 Lateral
+                            </label>
+                            
+            
+                            <label for="radio_frontal">
+                                <input type="radio" name="inicio" id="radio_frontal" value="frontal" required> 
+                                Frontal
+                            </label>
+                            
+                        </div>
+                        
+                        <label><h3>FIM DA OPERAÇÃO</h3></label>
+                        
+                        <div class="check">
+                            
+    
+                            <label for="radio_traseira">
+                                <input type="radio" name="fim" id="radio_traseira" value="traseira" required checked>
+                                 Traseira
+                            </label>
+                        
+        
+                            <label for="radio_lateral">
+                                <input type="radio" name="fim" id="radio_lateral" value="lateral" required> 
+                                Lateral
+                            </label>
+                            
+            
+                            <label for="radio_frontal">
+                                <input type="radio" name="fim" id="radio_frontal" value="frontal" required> 
+                                Frontal
+                            </label>
+
+                        </div>
+                    </section>
+    
+                    <section class="amarracao">
+                        <h3>AMARRAÇÃO</h3>
+                        
+                        <div class="titulo">
+                            <label><strong>Selecione as amarrações e equipamentos:</strong></label><br>
+                        </div>
+                        
+
+                        <div class="check-amarracao">
+                           
+
+                        <div class="container" >
+                            <label for="amarracao1">
+                                <input type="checkbox" id="amarracao1" name="amarracao1" value="cabo">
+                                Laço de cabo
+                            </label>
+                            
+                            <label for="amarracao2">
+                                <input type="checkbox" id="amarracao2" name="amarracao2" value="cinta">
+                                Cinta sintética
+                            </label>
+                        </div>
+
+                        <div class="container">
+                            <label for="amarracao3">
+                                <input type="checkbox" id="amarracao3" name="amarracao3" value="corrente">
+                                Corrente
+                            </label>
+                            
+                            <label for="amarracao4">
+                                <input type="checkbox" id="amarracao4" name="amarracao4" value="manilha">
+                                Manilha
+                            </label>
+                        </div>
+                            
+                        <div class="container">
+                            <label for="amarracao5">
+                                <input type="checkbox" id="amarracao5" name="amarracao5" value="gancho">
+                                Gancho
+                            </label>
+                            
+                            <label for="amarracao6">
+                                <input type="checkbox" id="amarracao6" name="amarracao6" value="outros">
+                                Outros
+                            </label>
+
+                        </div>
+                            
+                        </div>
+    
+                        <div class="comen-amarracao">
+                            <label for="comen"><strong>Informações e observações sobre a amarração: </strong></label><br>
+                            <textarea rows="6" id="comen" name="comen"></textarea>
+                        </div>
+                    </section>
+                   
+                    <section class="guindaste">
+                        <h3>CONFIGURAÇÔES DO GUINDASTE</h3>
+                        
+                        <label for="modelo">
+                            <span>Modelo:</span>
+                            <input type="text" id="modelo" name="modelo" required>
+                        </label>
+        
+                        <label for="raio">
+                            <span>Raio de Operação(m):</span>
+                            <input type="text" id="raio" name="raio" required>
+                        </label>
+        
+                        <label for="altura">
+                            <span>Altura de Elevação(m):</span>
+                            <input type="text" id="altura" name="altura" required>
+                        </label>
+
+                    </section>
+                
+                <div id="botao">
+                    <input type="submit" value="Enviar" class="botao">
+                </div>
+                    
+    
+                </form>
+            </main>
+    
+            <footer>
+                <a href="https://www.daviprojetos.com.br/" target="_blank" rel="noopener noreferrer"><img src="logonovo + site.png" class="logo_davi_projetos"></a>
+                <p class="copyright" >&copy; Copyright Davi Projetos e Consultoria de Rigging - 2022</p>
+            </footer>
+        </div>
+        
+        
+    </body>
+
+</html>
